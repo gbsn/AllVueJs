@@ -21,9 +21,15 @@
         </div>
       </div>
       
-      <button @click="$router.push('/status')" class="btn-link btn-navigation">🚀 Ver Status Global do GitHub</button>
-      <br>
-      <a :to="userData.html_url" target="_blank" class="btn-link">Ver GitHub Oficial</a>
+      <div class="actions-container">
+        <button @click="$router.push('/status?popup=welcome')" class="btn-link btn-navigation">
+          🚀 Ver Status Global do GitHub
+        </button>
+        
+        <a :href="userData.html_url" target="_blank" class="btn-link">
+          Ver GitHub Oficial
+        </a>
+      </div>
     </div>
 
     <p v-else class="loading">Buscando dados do sistema...</p>
@@ -38,10 +44,8 @@ import axios from 'axios'
 const router = useRouter()
 const userData = ref(null)
 
-// Função para buscar os dados do seu GitHub
 const fetchGitHubData = async () => {
   try {
-    // Substitua 'oQuasi' pelo seu nome de usuário exato no GitHub
     const response = await axios.get('https://api.github.com/users/gbsn')
     userData.value = response.data
   } catch (error) {
@@ -49,7 +53,6 @@ const fetchGitHubData = async () => {
   }
 }
 
-// Quando a tela abre, ela executa a busca
 onMounted(() => {
   fetchGitHubData()
 })
@@ -119,27 +122,44 @@ header {
   cursor: pointer;
 }
 
-.btn-link {
-  display: inline-block;
+/* AJUSTES DOS BOTÕES */
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 20px;
-  color: #1a1a1a;
-  background-color: #42d392;
-  padding: 10px 20px;
+}
+
+.btn-link {
+  display: block;
+  width: 100%;
+  padding: 12px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  background-color: #42d392;
+  color: #1a1a1a;
+  transition: 0.3s;
 }
 
 .btn-navigation {
-  margin-top: 10px; /* Pequeno espaço entre os botões */
-  background: linear-gradient(135deg, var(--dynamic-color), #647eff); /* Mesmo degradê do login/botão oficial */
-  cursor: pointer;
-  border: none;
-  width: 100%; /* Para ocupar a mesma largura no mobile */
+  /* Forçamos o degradê e garantimos que o texto não suma */
+  background: linear-gradient(135deg, #42d392, #647eff) !important;
+  color: #1a1a1a !important;
+  box-shadow: 0 0 10px rgba(66, 211, 146, 0.3);
 }
 
-.btn-navigation:hover {
+.btn-link:hover {
   filter: brightness(1.2);
-  box-shadow: 0 0 15px var(--dynamic-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #42d392;
+}
+
+.loading {
+  text-align: center;
+  color: #42d392;
 }
 </style>
