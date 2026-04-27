@@ -25,7 +25,14 @@ const router = createRouter({
       path: '/dashboard',
       name: 'dashboard',
       component: DashboardView
-    }
+    },
+    {
+      path: '/status',
+      name: 'status',
+      // Criaremos este arquivo no próximo passo
+      component: () => import('../views/StatusView.vue') 
+    },
+    
   ]
 })
 
