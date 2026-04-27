@@ -22,12 +22,12 @@ Este projeto passou por um processo intenso de refatoração após um feedback t
 
 ## ✨ Funcionalidades Principais
 
-* [cite_start]**🔍 Busca Dinâmica:** Consulte qualquer usuário do GitHub em tempo real[cite: 37].
-* [cite_start]**📡 System Status:** Monitoramento operacional dos serviços do GitHub via API oficial[cite: 33, 34].
+* **🔍 Busca Dinâmica:** Consulte qualquer usuário do GitHub em tempo real[cite: 37].
+* **📡 System Status:** Monitoramento operacional dos serviços do GitHub via API oficial[cite: 33, 34].
 * **🎨 Interface Camaleão:** UI que extrai e aplica a cor predominante da foto de perfil do usuário.
-* [cite_start]**⏱️ Auto-Refresh:** Atualização automática de dados a cada 30 segundos com timer visível[cite: 45, 46].
-* [cite_start]**🔐 Route Guards:** Proteção de rotas para garantir que o dashboard só seja acessado após o login[cite: 17, 60].
-* [cite_start]**👋 Smart Welcome:** Detecção de Query Parameters (`?popup=welcome`) para exibição de boas-vindas[cite: 41, 42].
+* **⏱️ Auto-Refresh:** Atualização automática de dados a cada 30 segundos com timer visível[cite: 45, 46].
+* **🔐 Route Guards:** Proteção de rotas para garantir que o dashboard só seja acessado após o login[cite: 17, 60].
+* **👋 Smart Welcome:** Detecção de Query Parameters (`?popup=welcome`) para exibição de boas-vindas[cite: 41, 42].
 
 ---
 
