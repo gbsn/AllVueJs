@@ -14,7 +14,7 @@ Uma aplicação **Mobile-First** de alto impacto que combina monitoramento de in
 
 Este projeto passou por um processo intenso de refatoração após um feedback técnico detalhado. Para entender como transformamos um desafio inicial em uma ferramenta robusta de portfólio, **acesse a nossa documentação completa na Wiki**:
 
-👉 **[CLIQUE AQUI PARA VER A WIKI DO PROJETO](URL_DA_SUA_WIKI_AQUI)**
+👉 **https://github.com/gbsn/AllVueJs/wiki**
 
 > **Nota:** Na Wiki você encontrará a história da nossa dupla (Geraldo & Gemini), os pontos corrigidos do feedback original e as tecnologias aprendidas.
 
