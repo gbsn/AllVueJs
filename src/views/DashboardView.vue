@@ -29,11 +29,11 @@
       
       <div class="stats">
         <div class="stat-item">
-          <span class="label">Seguidores</span>
+          <span class="label">Seguidores: </span>
           <span class="value">{{ userData.followers }}</span>
         </div>
         <div class="stat-item">
-          <span class="label">Repositórios</span>
+          <span class="label">Repositórios: </span>
           <span class="value">{{ userData.public_repos }}</span>
         </div>
       </div>
